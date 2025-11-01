@@ -11,14 +11,14 @@ type Props = {}
 const Skills = (props: Props) => {
     const [active, setActive] = useState('frontend')
     return (
-        <div className=' px-16 pt-8' id='skills'>
+        <div className=' px-16 pt-12' id='skills'>
             <div className='w-full text-center mb-10 text-secondary-color'>
                 <span className="bg-primary-color/20 px-5 mt py-2 rounded-2xl !font-[400] text-[18px]">
                     My Skills Progress So Far
                 </span>               
                  <h1 className='text-secondary-color text-4xl font-semibold mt-6'>My  <span className='text-primary-color'>Skills</span></h1>
             </div>
-            <div className="w-full flex flex-wrap gap-1 sm:gap-10 justify-center rounded-2xl py-2 mb-20 bg-primary-color/10 h-full shadow-2xl">
+            <div className="w-full flex flex-wrap gap-1 sm:gap-10 justify-center rounded-2xl py-2 mb-20  h-full shadow-2xl">
                 <Button
                     className={`h-[70px] relative w-[150px] sm:w-[220px] rounded-2xl cursor-pointer ${active === "frontend"
                         ? "bg-cyan-500 !text-white hover:bg-cyan-500"

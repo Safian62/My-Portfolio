@@ -17,20 +17,33 @@ export default function Navbar() {
   }, []);
 
   // Active section tracking
-  useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveId(entry.target.id);
-        });
-      },
-      { threshold: 0.6 }
-    );
+ useEffect(() => {
+  const sectionIds = ["home", "about", "skills", "projects", "contact"];
+  const elements: HTMLElement[] = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => el !== null);
 
-    sections.forEach((section) => observer.observe(section));
-    return () => sections.forEach((section) => observer.unobserve(section));
-  }, []);
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Only set activeId if element is mostly visible
+          setActiveId(entry.target.id);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // 50% of element visible
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+  return () => elements.forEach((el) => observer.unobserve(el));
+}, []);
 
   // Handle hash change (URL)
   useEffect(() => {
@@ -75,21 +88,27 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 items-center font-medium">
           {navItems.map((item) => (
             <li key={item.id} className="">
-              <a 
-                href={item.href}
-                className={linkClasses(item.id)}
-                onClick={(e) => {
-                  if (item.id === "home") {
-                    e.preventDefault();
-                    setActiveId("home");
-                    history.replaceState(null, "", "#");
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                }}
-                
-              >
-                {item.label}
-              </a>
+                  <a
+                    href={item.href}
+                    className={linkClasses(item.id)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (item.id === "home") {
+                        setActiveId("home");
+                        history.replaceState(null, "", "#");
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        return;
+                      }
+                      const el = document.getElementById(item.id);
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                        history.replaceState(null, "", `#${item.id}`);
+                        setActiveId(item.id);
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </a>
             </li>
           ))}
 
@@ -98,7 +117,7 @@ export default function Navbar() {
             <Link
               href="http://github.com/Safian62"
               target="_blank"
-              className="bg-[#f1f5f9] p-2.5 rounded-lg ml-10 cursor-pointer text-gray-700"
+              className="bg-[#f1f5f9] hover:bg-primary-color hover:text-white p-2.5 rounded-lg ml-10 cursor-pointer text-gray-700"
             >
               <Github size={20} />
             </Link>
@@ -106,16 +125,18 @@ export default function Navbar() {
             <Link
               href="https://www.linkedin.com/in/m-safian-aa9619386"
               target="_blank"
-              className="bg-[#f1f5f9] text-gray-700 p-2.5 rounded-lg cursor-pointer"
+              className="bg-[#f1f5f9] hover:bg-primary-color hover:text-white text-gray-700 p-2.5 rounded-lg cursor-pointer"
             >
               <Linkedin size={20} />
             </Link>
           </div>
 
           {/* Resume Button */}
-            <div className="sm:w-[120px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[45px] rounded-md cursor-pointer text-white bg-primary-color/80">
+          <a href="/resume.pdf" download={'Muhammad_Safian_Resume.pdf'}>
+            <div className="sm:w-[120px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[45px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105">
               <Download size={18} /> Resume
             </div>
+          </a>
         </ul>
       </div>
     </nav>

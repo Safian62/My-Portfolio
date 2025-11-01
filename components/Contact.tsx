@@ -64,30 +64,31 @@ const Contact = (props: Props) => {
                     together to create something amazing.
                 </p>
             </div>
-            <div className="mt-20 lg:flex gap-16">
+            <div className="mt-20 lg:flex gap-16 ">
                 {/* Left side */}
-                <div className="lg:w-[40%] mb-10">
-                    <div className="mt-10">
+                <div className="lg:w-[50%] mb-10 px-10">
+                    <div className="">
                         <h1 className="text-3xl font-bold text-secondary-color">Let's Work Together</h1>
                         <p className="text-secondary-color max-w-xl my-8 text-justify">I'm always excited to discuss new opportunities, innovative projects, or potential collaborations. Whether you're looking for a technical leader, a full-stack developer, or a mentor for your team, I'd love to hear from you.</p>
                     </div>
-                    <div className="space-y-8">
-                        <div className="flex gap-3 ">
-                            <Phone size={50} className="inline p-3 rounded-md bg-primary-color/10 text-secondary-color" />
+                    <div className="space-y-[20px]">
+                        <h2 className="font-bold text-left text-secondary-color">Contact Information :</h2>
+                        <div className="flex gap-3 border p-3 rounded-xl shadow-md">
+                            <Phone size={50} className="inline p-3 rounded-md bg-primary-color/10 text-primary-color" />
                             <div className="text-start">
                                 <h4 className="text-primary-color font-semibold">Phone</h4>
                                 <p className="text-secondary-color">+92 3114545210</p>
                             </div>
                         </div>
-                        <div className="flex gap-3 ">
-                            <Mail size={50} className="inline p-3 rounded-md bg-primary-color/10 text-secondary-color" />
+                        <div className="flex gap-3 border p-3 rounded-xl shadow-md">
+                            <Mail size={50} className="inline p-3 rounded-md bg-primary-color/10 text-primary-color" />
                             <div className="text-start">
                                 <h4 className="text-primary-color font-semibold">Email</h4>
                                 <p className="text-secondary-color">meharsafian62@gmail.com</p>
                             </div>
                         </div>
-                        <div className="flex gap-3 ">
-                            <MapPin size={50} className="inline p-3 rounded-md bg-primary-color/10 text-secondary-color" />
+                        <div className="flex gap-3 border p-3 rounded-xl shadow-md">
+                            <MapPin size={50} className="inline p-3 rounded-md bg-primary-color/10 text-primary-color" />
                             <div className="text-start">
                                 <h4 className="text-primary-color font-semibold">Address</h4>
                                 <p className="text-secondary-color">Lahore, Punjab,     Pakistan</p>
@@ -97,8 +98,8 @@ const Contact = (props: Props) => {
 
                 </div>
                 {/* Right side */}
-                <div className="lg:w-[48%]">
-                    <Card className="text-start border border-primary-color/20 hover:border-primary-color bg-primary-color/10">
+                <div className="lg:w-[50%]">
+                    <Card className="text-start">
                         <CardHeader>
                             <h3 className="text-2xl font-bold text-secondary-color" >
                                 Send a <span>Message</span>
@@ -112,6 +113,7 @@ const Contact = (props: Props) => {
                                         <Input
                                             type="name"
                                             value={name}
+                                            required
                                             onChange={(e) => setName(e.target.value)}
                                             placeholder="Your name"
                                             id="name"
@@ -122,6 +124,7 @@ const Contact = (props: Props) => {
                                         <Input
                                             type="email"
                                             value={email}
+                                            required
                                             onChange={(e) => setEmail(e.target.value)}
                                             placeholder="your@email.com"
                                             id="email"
@@ -134,6 +137,7 @@ const Contact = (props: Props) => {
                                 <Input
                                     type="text"
                                     value={subject}
+                                    required
                                     onChange={(e) => setSubject(e.target.value)}
                                     placeholder="What's this about?"
                                     name="subject"
@@ -144,6 +148,7 @@ const Contact = (props: Props) => {
                                 </Label>
                                 <Textarea
                                     value={message}
+                                    required
                                     onChange={(e) => setMessage(e.target.value)}
                                     placeholder="Tell me about Your Project..."
                                 />

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { AiOutlineSend } from "react-icons/ai";
 import { motion } from 'framer-motion'
 import Image from "next/image";
 type Props = {};
@@ -8,7 +7,7 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div
-      className={` w-full lg:flex justify-between py-24 px-16 bg-white relative "
+      className={` w-full lg:flex justify-between pt-28 pb-10 px-16 bg-white relative "
         }`}
       id="home"
     >
@@ -35,30 +34,47 @@ const Hero = (props: Props) => {
             className={`text-[15px] font-semibold text-gray-700
               }`}
           >
-            I am a MERN stack developer with experience in building modern and
-            responsive web applications. I work with MongoDB, Express.js, React,
-            and Node.js to create efficient and user-friendly solutions. I enjoy
-            learning new technologies and improving my skills to deliver better
-            results in every project.
+            As a MERN Stack Engineer, I specialize in building modern,
+            high-performance web applications. With expertise in both Frontend and Backend development,
+            I leverage MongoDB, Express.js, React, and Node.js to create scalable solutions.
+            My experience spans across responsive frontend interfaces and robust backend architectures,
+            delivering exceptional user experiences and efficient server-side solutions.
           </p>
-          <motion.div
-            className="mt-10 "
-            initial={{ opacity: 0, y: 100 }}
-            transition={{ duration: 2 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
+            className="mt-10 flex gap-5"
           >
-            <div className="sm:w-[150px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[45px] rounded-md cursor-pointer text-white bg-primary-color/80 font-bold">
+            <div
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="sm:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
               Let's Connect
             </div>
+            <div
+              onClick={() => {
+                const contactSection = document.getElementById('projects');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="sm:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
+              View my work
+            </div>
 
-          </motion.div>
+          </div>
         </div>
       </div>
       <div className="flex justify-center items-center border-4 h-[35%] mt-12 mr-10 border-primary-color rounded-xl">
-        {/* <div className="">
-          <Image src={'/assests/channels4_profile.jpg'} width={20} height={20} alt="" className="rounded-[10px] h-[350px] w-[350px] bg-cover" />
-        </div> */}
+        <div className="">
+          <img
+            src="assests/professional.png"
+            alt="profile"
+            className="rounded-[10px] h-[385px] w-[340px] object-cover"
+          />
+        </div>
       </div>
 
     </div>

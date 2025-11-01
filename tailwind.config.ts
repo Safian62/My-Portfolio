@@ -11,15 +11,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-     keyframes: {
-    'rotate-line': {
-      '0%': { transform: 'rotate(0deg)' },
-      '100%': { transform: 'rotate(360deg)' },
-    },
-  },
-  animation: {
-    'rotate-line': 'rotate-line 3s linear infinite',
-  },
+      keyframes: {
+        'rotate-line': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        'rotate-line': 'rotate-line 3s linear infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -33,9 +33,15 @@ const config: Config = {
         },
         "primary-color": ({ opacityValue }: { opacityValue?: string }) => {
           if (opacityValue !== undefined) {
-            return `rgb(24 196 184 / ${opacityValue})`;
+            return `rgb(6 182 212 /  ${opacityValue})`;
           }
           return `var(--primary-color)`;
+        },
+        "primary-dark-color": ({ opacityValue }: { opacityValue?: string }) => {
+          if (opacityValue !== undefined) {
+            return `rgb(19 155 145 / ${opacityValue})`;
+          }
+          return `var(--primary-dark-color)`;
         },
         "secondary-color": "var(--secondary-color)",
 

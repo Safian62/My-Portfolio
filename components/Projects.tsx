@@ -9,7 +9,7 @@ type Props = {}
 
 const Projects = (props: Props) => {
     return (
-        <div className=' text-center px-14 pt-5 text-secondary-color' id='projects'>
+        <div className=' text-center px-14 pt-12 text-secondary-color' id='projects'>
             <span className="bg-primary-color/30 px-5 py-2 rounded-2xl !font-[400] text-[18px]">
                 My Work
             </span>
@@ -17,7 +17,7 @@ const Projects = (props: Props) => {
             <div className='flex flex-wrap gap-5 mt-20'>
                 {
                     projectData.map((project, index) => (
-                        <Card className='text-start w-[370px] pt-5 bg-primary-color/10  relative' key={index}>
+                        <Card className='text-start w-[370px] pt-5 border-primary-color relative' key={index}>
                             <CardContent className='mb-16'>
                                 <Image src={project.img} alt=""
                                     height={220} width={420}
