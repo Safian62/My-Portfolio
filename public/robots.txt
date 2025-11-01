@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: /sitemap.xml
+
+# Note: No domain configured — robots references local sitemap path. When you add a domain, update this file to point to https://your-domain.com/sitemap.xml
