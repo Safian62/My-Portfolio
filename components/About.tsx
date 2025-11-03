@@ -20,24 +20,24 @@ const About = (props: Props) => {
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-color mb-6 text-center">Mern Stack Developer</h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-center  ">
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-justify sm:text-center">
               I specialize in building scalable full-stack applications using MongoDB, Express.js, React, and Node.js, creating robust and maintainable backend systems and efficient RESTful APIs.
 
             </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-center">
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-justify sm:text-center">
               I am passionate about integrating AI technologies like OpenAI and Gemini, performing model fine-tuning and prompt engineering to enhance application functionality and user experience.
 
             </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-center">
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-4xl text-justify sm:text-center">
               Skilled in NextJS and ReactJS, I develop dynamic and responsive user interfaces, ensuring seamless integration between frontend and backend for innovative SaaS, B2B, and B2C products.
 
             </p>
           </div>
 
           {/* Right column: role cards */}
-          <aside className="flex  gap-5">
+          <aside className="md:flex gap-5 space-y-5 md:space-y-0">
             <div className="p-6 bg-white rounded-xl shadow-sm border border-primary-color">
               <div className="inline-flex items-center justify-center h-10 w-10 rounded-md bg-primary-color/10 mb-3 text-secondary-color">
                 <Tv />

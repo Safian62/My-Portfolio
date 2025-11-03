@@ -11,7 +11,7 @@ type Props = {}
 const Skills = (props: Props) => {
     const [active, setActive] = useState('frontend')
     return (
-        <div className=' px-16 pt-12' id='skills'>
+        <div className='px-6 md:px-16 pt-12' id='skills'>
             <div className='w-full text-center mb-10 text-secondary-color'>
                 <span className="bg-primary-color/20 px-5 mt py-2 rounded-2xl !font-[400] text-[18px]">
                     My Skills Progress So Far

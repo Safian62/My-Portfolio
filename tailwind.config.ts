@@ -10,20 +10,29 @@ const config: Config = {
     "./data/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // 👇 Add your custom screen here
+    screens: {
+      sm: "640px",
+      md: "768px",
+      custom: "880px", // 👈 Custom breakpoint (min-width: 880px)
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+
     extend: {
       keyframes: {
-        'rotate-line': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
+        "rotate-line": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
       },
       animation: {
-        'rotate-line': 'rotate-line 3s linear infinite',
+        "rotate-line": "rotate-line 3s linear infinite",
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-
 
         "background-color": ({ opacityValue }: { opacityValue?: string }) => {
           if (opacityValue !== undefined) {
@@ -82,6 +91,7 @@ const config: Config = {
         "sidebar-border": "var(--sidebar-border)",
         "sidebar-ring": "var(--sidebar-ring)",
       } as any,
+
       borderRadius: {
         sm: "calc(var(--radius) - 4px)",
         md: "calc(var(--radius) - 2px)",

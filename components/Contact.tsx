@@ -49,7 +49,7 @@ const Contact = (props: Props) => {
     }
     return (
         <div
-            className="text-center pt-20 px-6  pb-6 sm:px-16"
+            className="text-center pt-20 px-6 pb-6 sm:px-16"
             id="contact"
         >
             <div>
@@ -66,7 +66,7 @@ const Contact = (props: Props) => {
             </div>
             <div className="mt-20 lg:flex gap-16 ">
                 {/* Left side */}
-                <div className="lg:w-[50%] mb-10 px-10">
+                <div className="lg:w-[50%] mb-10 md:px-10">
                     <div className="">
                         <h1 className="text-3xl font-bold text-secondary-color">Let's Work Together</h1>
                         <p className="text-secondary-color max-w-xl my-8 text-justify">I'm always excited to discuss new opportunities, innovative projects, or potential collaborations. Whether you're looking for a technical leader, a full-stack developer, or a mentor for your team, I'd love to hear from you.</p>

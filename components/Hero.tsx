@@ -7,14 +7,14 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div
-      className={` w-full lg:flex justify-between pt-28 pb-10 px-16 bg-white relative "
+      className={` w-full flex flex-col-reverse items-center lg:flex lg:flex-row justify-between pt-28 pb-10 px-6 md:px-16 bg-white relative "
         }`}
       id="home"
     >
-      <div className="w-[50%] mt-2" >
-        <div>
+      <div className=" lg:text-start mt-10 lg:w-[50%] lg:mt-2" >
+        <div className="flex flex-col lg:items-start items-center ">
           <pre
-            className="text-[17px] text-primary-color top-1"
+            className="text-[17px] text-primary-color top-1 ml-1 md:ml-0"
           >
             MERN STACK DEVELOPER
           </pre>
@@ -28,7 +28,7 @@ const Hero = (props: Props) => {
             className={`text-[50px] font-bold my-4  text-primary-color
               }`}
           >
-            Muhammad <br /> Safian
+            Muhammad Safian
           </h1>
           <p
             className={`text-[15px] font-semibold text-gray-700
@@ -50,7 +50,7 @@ const Hero = (props: Props) => {
                   contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="sm:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
+              className="w-[140px] md:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
               Let's Connect
             </div>
             <div
@@ -60,14 +60,14 @@ const Hero = (props: Props) => {
                   contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="sm:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
+              className="w-[140px] md:w-[170px] flex justify-center items-center gap-2 border mt-5 sm:mt-0 h-[50px] rounded-md cursor-pointer text-white bg-primary-color transition duration-300 hover:scale-105 font-bold">
               View my work
             </div>
 
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center border-4 h-[35%] mt-12 mr-10 border-primary-color rounded-xl">
+      <div className="flex w-fit justify-center items-center border-4 h-[35%] lg:mt-12 lg:mr-10 border-primary-color rounded-xl">
         <div className="">
           <img
             src="assests/professional.png"
