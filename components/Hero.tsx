@@ -70,7 +70,7 @@ const Hero = (props: Props) => {
       <div className="flex w-fit justify-center items-center border-4 h-[35%] lg:mt-12 lg:mr-10 border-primary-color rounded-xl">
         <div className="">
           <img
-            src="assests/professional.png"
+            src="assests/safian-photo.png"
             alt="profile"
             className="rounded-[10px] h-[385px] w-[340px] object-cover"
           />
