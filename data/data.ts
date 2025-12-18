@@ -2,6 +2,8 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import eShopImage from '../public/assests/Screenshot 2025-10-04 183911.png'
 import eLearningImage from '../public/assests/Screenshot 2025-10-04 185240.png'
 import realstateImage from '../public/assests/Screenshot 2025-10-04 190154.png'
+import movieAppImage from '../public/assests/movie.jpg'
+import eShopMobilemage from '../public/assests/e-shop-mobile.jpg'
 
 export const contactData = [
     {
@@ -80,6 +82,34 @@ export const projectData = [
         url: 'https://real-state-wheat-two.vercel.app/',
         code: 'https://github.com/Safian62/realState'
     },
+    {
+        img: eShopMobilemage,
+        technologies: [
+            'REACT-NATIVE',
+            'EXPO',
+            'TAILWIND',
+            'TS',
+        ],
+        title: 'E-SHOP-MOBILE',
+        description: 'Mobile E-Commerce App – A full-stack React Native + Expo mobile app for shopping with user-friendly navigation, product browsing, cart management, and order handling. Built with Redux, Tailwind CSS, Node.js, and MongoDB for real-time and scalable functionality.',
+        url: 'https://github.com/Safian62/E-Shop-Mobile',
+        code: 'https://github.com/Safian62/E-Shop-Mobile'
+    },
+    {
+        img: movieAppImage,
+        technologies: [
+            'REACT-NATIVE',
+            'EXPO',
+            'TAILWIND',
+            'API',
+            'JS',
+        ],
+        title: 'MOVIE-APP-MOBILE',
+        description: 'Mobile Movie Discovery App – A React Native + Expo application that lets users browse, search, and view movie details using real-time data from a movie API. Built with Tailwind CSS for responsive UI and seamless performance on mobile devices.',
+        url: 'https://github.com/Safian62/Movie-App-Mobile',
+        code: 'https://github.com/Safian62/Movie-App-Mobile'
+    }
+
 ]
 
 export const SkillsData = {
@@ -156,7 +186,7 @@ export const SkillsData = {
             img: 'https://yt3.googleusercontent.com/PKRBxhCiGa8Y0vPmHa1E2cdjpLhUq2Pl-gESwP7kk2plGgxLdsbjyTd9VjcJwBMiY0HQ8bvx5Q=s900-c-k-c0x00ffffff-no-rj',
             name: 'GitHub'
         },
-         {
+        {
             img: 'https://yt3.googleusercontent.com/PKRBxhCiGa8Y0vPmHa1E2cdjpLhUq2Pl-gESwP7kk2plGgxLdsbjyTd9VjcJwBMiY0HQ8bvx5Q=s900-c-k-c0x00ffffff-no-rj',
             name: 'Git'
         },
@@ -168,7 +198,7 @@ export const SkillsData = {
             img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0AaztiWmGTUTLl0bJNvQE-HyOtqyWLY4I4g&s',
             name: 'Stripe'
         },
-         {
+        {
             img: 'https://pbs.twimg.com/profile_images/1534945114807644173/h22f7y8F_400x400.png',
             name: 'Postman'
         }

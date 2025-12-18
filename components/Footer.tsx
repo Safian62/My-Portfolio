@@ -34,24 +34,25 @@ const Footer = (props: Props) => {
       suppressHydrationWarning
     >
       {/* Left text */}
-      <div>
+      <div className="mx-auto">
         <h5 className=" text-gray-700 text-center sm:text-start text-[17px]">
           © 2025 Muhammad Safian — crafted with Next.js, TypeScript, and
           Tailwind CSS.
         </h5>
-        <p className="text-gray-600 mt-2 text-center sm:text-start">
+        <p className="text-gray-600 mt-2 text-center">
           Building useful products with care, clarity, and a founder mindset.
         </p>
       </div>
 
       {/* Back to top inline button */}
-      <div
-        className="sm:w-[180px] border text-white mt-5 sm:mt-0 h-[50px] rounded-lg cursor-pointer bg-primary-color flex justify-center items-center font-bold"
-        onClick={scrollToTop}
-      >
-        Back To Top <ArrowUp className="inline ml-1 mt-1" size={20} />
-      </div>
-
+      {scrollPercent > 5 && (
+        <div
+          className="border w-fit h-fit p-2 fixed right-5 bottom-10 text-white rounded-full cursor-pointer bg-primary-color flex justify-center items-center font-bold transition-opacity duration-300"
+          onClick={scrollToTop}
+        >
+          <ArrowUp size={20} />
+        </div>
+      )}
     </footer>
   );
 };
