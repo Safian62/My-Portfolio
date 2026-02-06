@@ -16,7 +16,7 @@ const Hero = (props: Props) => {
           <pre
             className="text-[17px] text-primary-color top-1 ml-1 md:ml-0"
           >
-            MERN STACK DEVELOPER
+            Full STACK DEVELOPER
           </pre>
           <h2
             className={`text-5xl font-bold mt-2  text-gray-800
@@ -34,9 +34,9 @@ const Hero = (props: Props) => {
             className={`text-[15px] font-semibold text-gray-700
               }`}
           >
-            As a MERN Stack Engineer, I specialize in building modern,
+            As a Full Stack Developer, I specialize in building modern,
             high-performance web applications. With expertise in both Frontend and Backend development,
-            I leverage MongoDB, Express.js, React, and Node.js to create scalable solutions.
+            I leverage MongoDB, postgreSQL, Express.js, React, and Node.js to create scalable solutions.
             My experience spans across responsive frontend interfaces and robust backend architectures,
             delivering exceptional user experiences and efficient server-side solutions.
           </p>

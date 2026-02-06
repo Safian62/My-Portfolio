@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <div className="scroll-smooth">
       <Navbar />
-
       <Hero />
       <About />
       <Skills />

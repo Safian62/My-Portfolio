@@ -4,6 +4,7 @@ import eLearningImage from '../public/assests/Screenshot 2025-10-04 185240.png'
 import realstateImage from '../public/assests/Screenshot 2025-10-04 190154.png'
 import movieAppImage from '../public/assests/movie.jpg'
 import eShopMobilemage from '../public/assests/e-shop-mobile.jpg'
+import asanHomeImage from '../public/assests/asanhome.png'
 
 export const contactData = [
     {
@@ -41,6 +42,20 @@ export const contactData = [
 ];
 
 export const projectData = [
+     {
+        img: asanHomeImage,
+        technologies: [
+            'REACT',
+            'NODE',
+            'SOCKET',
+            'TAILWIND',
+            'REDUX',
+        ],
+        title: 'ASAANHOME',
+        description: "ASAANHOME – A full-stack real estate booking platform built as my first professional project. Developed with a team of four, it enables property listing management, customer bookings, and automated workflows. Gained hands-on experience in UI/UX design, backend development, cloud deployment (AWS), and CI/CD pipelines, tackling real-world production challenges.",
+        url: 'https://asaanhome.com/',
+        code: 'https://asaanhome.com/'
+    },
     {
         img: eShopImage,
         technologies: [
@@ -62,7 +77,6 @@ export const projectData = [
             'NODE',
             'SOCKET',
             'TAILWIND',
-            'RTK',
             'TS'
         ],
         title: 'E-LEARNING',
@@ -163,6 +177,10 @@ export const SkillsData = {
         {
             img: 'https://media.licdn.com/dms/image/v2/C560BAQFK5nEFJqpDyg/company-logo_200_200/company-logo_200_200/0/1630639402984/exp_recruitment_logo?e=2147483647&v=beta&t=Byu-ALIrBki9cUjqVDkhPh-2nRgU3saviNrp8KjK8qs',
             name: 'Express'
+        },
+        {
+            img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png',
+            name: 'PostgreSQL'
         },
         {
             img: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg',
