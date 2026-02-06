@@ -96,33 +96,33 @@ export const projectData = [
         url: 'https://real-state-wheat-two.vercel.app/',
         code: 'https://github.com/Safian62/realState'
     },
-    {
-        img: eShopMobilemage,
-        technologies: [
-            'REACT-NATIVE',
-            'EXPO',
-            'TAILWIND',
-            'TS',
-        ],
-        title: 'E-SHOP-MOBILE',
-        description: 'Mobile E-Commerce App – A full-stack React Native + Expo mobile app for shopping with user-friendly navigation, product browsing, cart management, and order handling. Built with Redux, Tailwind CSS, Node.js, and MongoDB for real-time and scalable functionality.',
-        url: 'https://github.com/Safian62/E-Shop-Mobile',
-        code: 'https://github.com/Safian62/E-Shop-Mobile'
-    },
-    {
-        img: movieAppImage,
-        technologies: [
-            'REACT-NATIVE',
-            'EXPO',
-            'TAILWIND',
-            'API',
-            'JS',
-        ],
-        title: 'MOVIE-APP-MOBILE',
-        description: 'Mobile Movie Discovery App – A React Native + Expo application that lets users browse, search, and view movie details using real-time data from a movie API. Built with Tailwind CSS for responsive UI and seamless performance on mobile devices.',
-        url: 'https://github.com/Safian62/Movie-App-Mobile',
-        code: 'https://github.com/Safian62/Movie-App-Mobile'
-    }
+    // {
+    //     img: eShopMobilemage,
+    //     technologies: [
+    //         'REACT-NATIVE',
+    //         'EXPO',
+    //         'TAILWIND',
+    //         'TS',
+    //     ],
+    //     title: 'E-SHOP-MOBILE',
+    //     description: 'Mobile E-Commerce App – A full-stack React Native + Expo mobile app for shopping with user-friendly navigation, product browsing, cart management, and order handling. Built with Redux, Tailwind CSS, Node.js, and MongoDB for real-time and scalable functionality.',
+    //     url: 'https://github.com/Safian62/E-Shop-Mobile',
+    //     code: 'https://github.com/Safian62/E-Shop-Mobile'
+    // },
+    // {
+    //     img: movieAppImage,
+    //     technologies: [
+    //         'REACT-NATIVE',
+    //         'EXPO',
+    //         'TAILWIND',
+    //         'API',
+    //         'JS',
+    //     ],
+    //     title: 'MOVIE-APP-MOBILE',
+    //     description: 'Mobile Movie Discovery App – A React Native + Expo application that lets users browse, search, and view movie details using real-time data from a movie API. Built with Tailwind CSS for responsive UI and seamless performance on mobile devices.',
+    //     url: 'https://github.com/Safian62/Movie-App-Mobile',
+    //     code: 'https://github.com/Safian62/Movie-App-Mobile'
+    // }
 
 ]
 
