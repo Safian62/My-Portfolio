@@ -42,7 +42,7 @@ export const contactData = [
 ];
 
 export const projectData = [
-     {
+    {
         img: asanHomeImage,
         technologies: [
             'REACT',
@@ -170,6 +170,10 @@ export const SkillsData = {
         },
     ],
     backend: [
+        {
+            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtFMzSNAug7sK-Zp3mQQoz-uMTkg1TAsAWjQ&s',
+            name: 'Nest js'
+        },
         {
             img: 'https://images.seeklogo.com/logo-png/47/1/node-js-logo-png_seeklogo-479905.png',
             name: 'Node js'
